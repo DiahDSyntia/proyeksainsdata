@@ -63,7 +63,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'deskripsi';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Tugas 2 (Pipeline)" href="tugas4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,12 +153,11 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tugas1_tweet.html">Tugas 1 - Twitter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datapta.html">Tugas 2 - Data Tugas Akhir Teknik Informatika</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataartikel.html">Tugas 3 - Data Artikel</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tugas1_tweet.html">Crawling Data Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datapta.html">Crawling Data Tugas Akhir Teknik Informatika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataartikel.html">Crawling Data Artikel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4.html">Tugas 2 (Pipeline)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Deskripsi Proses Pipelines</a></li>
 </ul>
 
     </div>
@@ -353,7 +351,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-ambil-data">Proses ambil data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-masukkan-data-ke-masing-masing-database">Proses masukkan data ke masing masing database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-orchest-io">Proses orchest io</a></li>
 </ul>
             </nav>
         </div>
@@ -367,13 +366,21 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="deskripsi-proses-pipelines">
 <h1>Deskripsi Proses Pipelines<a class="headerlink" href="#deskripsi-proses-pipelines" title="Permalink to this heading">#</a></h1>
-<div class="section" id="proses-ambil-data">
-<h2>Proses ambil data<a class="headerlink" href="#proses-ambil-data" title="Permalink to this heading">#</a></h2>
+<div class="section" id="proses-masukkan-data-ke-masing-masing-database">
+<h2>Proses masukkan data ke masing masing database<a class="headerlink" href="#proses-masukkan-data-ke-masing-masing-database" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Pertama, siapkan data yang akan di proses</p></li>
-<li><p>setelah itu masukkan data pada setiap database</p></li>
-<li></li>
-<li><p>List item</p></li>
+<li><p>Setelah itu masukkan data iris pada setiap database yang diinginkan, seperti mysql, postgre local, postgre elephant, dan sql server</p></li>
+<li><p>Setelah dataset sudah dimasukkan ke database, connect dengan code yang dibuat</p></li>
+</ol>
+</div>
+<div class="section" id="proses-orchest-io">
+<h2>Proses orchest io<a class="headerlink" href="#proses-orchest-io" title="Permalink to this heading">#</a></h2>
+<p>Data yang sudah berhasil dimasukkan dalam orchest io adalah postgre elephant</p>
+<p>Berikut penjelasan singkatnya:</p>
+<ol class="arabic simple">
+<li><p>Kita harus membuat database dan user di elephant karena di coding akan muncul kebutuhan itu</p></li>
+<li><p>Setelah itu buat new pipline untuk</p></li>
 </ol>
 </div>
 </div>
@@ -406,15 +413,6 @@ document.write(`
                 <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="tugas4.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 2 (Pipeline)</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -430,7 +428,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-ambil-data">Proses ambil data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-masukkan-data-ke-masing-masing-database">Proses masukkan data ke masing masing database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-orchest-io">Proses orchest io</a></li>
 </ul>
   </nav></div>
 

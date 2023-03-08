@@ -63,8 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas4';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Deskripsi Proses Pipelines" href="deskripsi.html" />
-    <link rel="prev" title="Tugas 3 - Data Artikel" href="dataartikel.html" />
+    <link rel="prev" title="Crawling Data Artikel" href="dataartikel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,11 +155,10 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tugas1_tweet.html">Tugas 1 - Twitter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datapta.html">Tugas 2 - Data Tugas Akhir Teknik Informatika</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataartikel.html">Tugas 3 - Data Artikel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas1_tweet.html">Crawling Data Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datapta.html">Crawling Data Tugas Akhir Teknik Informatika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataartikel.html">Crawling Data Artikel</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 2 (Pipeline)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deskripsi.html">Deskripsi Proses Pipelines</a></li>
 </ul>
 
     </div>
@@ -354,13 +352,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-sql-server">Data dari SQL Server</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-postgre-elephant">Data dari postgre elephant</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-postgre-local">Data dari postgre local</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-mysql">Data dari mysql</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-id">Drop id</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decicion-tree">Decicion Tree</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-proses">Deskripsi Proses</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-sql-server">Data dari SQL Server</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-sql-server">Penjelasan SQL Server:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-postgre-elephant">Data dari postgre elephant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-singkat">Penjelasan Singkat:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-postgre-local">Data dari postgre local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-mysql">Data dari mysql</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-id">Drop id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-akurasi">Menghitung akurasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decicion-tree">Decicion Tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -374,8 +379,27 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="tugas-2-pipeline">
 <h1>Tugas 2 (Pipeline)<a class="headerlink" href="#tugas-2-pipeline" title="Permalink to this heading">#</a></h1>
+<div class="section" id="deskripsi-proses">
+<h2>Deskripsi Proses<a class="headerlink" href="#deskripsi-proses" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Pertama yang harus dilakukan adalah menyiapkan dataset yang akan dimasukkan dalam database</p></li>
+<li><p>Setelah itu masukkan data iris pada setiap database yang diinginkan, seperti mysql, postgre local, postgre elephant, dan sql server</p></li>
+<li><p>Setelah dataset sudah dimasukkan ke database, connect dengan code yang dibuat</p></li>
+</ol>
+<p>Setelah itu masuk ke orchest io untuk memasukkan code connect database postgre elephant, disitu saya memasukkan code dan instalasi hal yang dibutuhkan seperti pandas, dan psycopg2</p>
+<p>Untuk postgre elephant bisa berhasil connect dan code bisa run di orchest io, tetapi untuk database lain belum berhasil</p>
 <div class="section" id="data-dari-sql-server">
-<h2>Data dari SQL Server<a class="headerlink" href="#data-dari-sql-server" title="Permalink to this heading">#</a></h2>
+<h3>Data dari SQL Server<a class="headerlink" href="#data-dari-sql-server" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="penjelasan-sql-server">
+<h3>Penjelasan SQL Server:<a class="headerlink" href="#penjelasan-sql-server" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Pastikan terlebih dahulu dataset sudah dimasukkan ke database sql server</p></li>
+<li><p>untuk database ini, yang dibutuhkan adalah id dan petalwidth</p></li>
+<li><p>setelah itu membuat code seperti dibawah ini untuk</p></li>
+<li><p>Masukkan server, nama database, dan nama tabel dengan benar agar tidak terjadi error</p></li>
+<li><p>Jika sudah benar semua, klik run dan data berhasil muncul</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyodbc</span> 
@@ -421,7 +445,19 @@ document.write(`
 </div>
 </div>
 <div class="section" id="data-dari-postgre-elephant">
-<h2>Data dari postgre elephant<a class="headerlink" href="#data-dari-postgre-elephant" title="Permalink to this heading">#</a></h2>
+<h3>Data dari postgre elephant<a class="headerlink" href="#data-dari-postgre-elephant" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="penjelasan-singkat">
+<h3>Penjelasan Singkat:<a class="headerlink" href="#penjelasan-singkat" title="Permalink to this heading">#</a></h3>
+<p>Ini adalah code untuk postgre elephant
+Seperti yang sql server, siapkan dataset terlebih dahulu, dan masukkan dataset kedalam database. sebelum itu juga kita harus membuat server di pgadmin yang terhubung ke postgre elephant</p>
+<ol class="arabic simple">
+<li><p>setelah dataset sudah ada di dalam database, mulai menulis code untuk connect</p></li>
+<li><p>code seperti dibawah ini</p></li>
+<li><p>sebelum di run, jangan lupa untuk install psycop2 untuk requirement agar tidak error</p></li>
+<li><p>jalankan code, jika tidak ada masalah maka code akan berjalan dan tidak ada error, seperti dibawah ini</p></li>
+<li><p>Connection successfull</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>psycopg2
@@ -578,7 +614,12 @@ Connection successful
 </div>
 </div>
 <div class="section" id="data-dari-postgre-local">
-<h2>Data dari postgre local<a class="headerlink" href="#data-dari-postgre-local" title="Permalink to this heading">#</a></h2>
+<h3>Data dari postgre local<a class="headerlink" href="#data-dari-postgre-local" title="Permalink to this heading">#</a></h3>
+<p>Dibawah ini adalah code untuk connect dari database postgre local
+Seperti sebelum sebelumnya, siapkan dataset yang berisi id dan sepallength dari iris untuk dimasukkan dalam database postgre local di pgadmin.</p>
+<p>Setelah database siap, tulis code seperti dibawah ini untuk mulai proses connection, teliti untuk host, database, user, password, nama tabel agar tidak terjadi error.</p>
+<p>Jangan lupa install librarynya.</p>
+<p>Setelah semua dirasa benar, run code dan lihat hasilnya. Jika benar maka hasil akan muncul seperti dibawah ini.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">psycopg2</span>
@@ -723,7 +764,12 @@ Connection successful
 </div>
 </div>
 <div class="section" id="data-dari-mysql">
-<h2>Data dari mysql<a class="headerlink" href="#data-dari-mysql" title="Permalink to this heading">#</a></h2>
+<h3>Data dari mysql<a class="headerlink" href="#data-dari-mysql" title="Permalink to this heading">#</a></h3>
+<p>Dibawah ini adalah code untuk connect dari database mysql localhost
+Seperti sebelumnya, siapkan dataset yang berisi id dan petallength dari iris untuk dimasukkan dalam database phpmyadmin mysql.</p>
+<p>Setelah database siap, tulis code seperti dibawah ini untuk mulai proses connection, teliti untuk host, database, user, password, nama tabel agar tidak terjadi error.</p>
+<p>Sebelum itu install mysql connector, mysqlclient, dan juga pymsql</p>
+<p>Setelah itu coba run code untuk melihat hasilnya, jika code benar maka akan ada tulisan connection dan hasil akan muncul.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysqlclient
@@ -849,6 +895,10 @@ Requirement already satisfied: pymysql in c:\users\ebc komputer\anaconda3\lib\si
 <p>150 rows × 2 columns</p>
 </div></div></div>
 </div>
+</div>
+<div class="section" id="penjelasan">
+<h3>Penjelasan:<a class="headerlink" href="#penjelasan" title="Permalink to this heading">#</a></h3>
+<p>Dibawah ini adalah code untuk menggabungkan hasilnya menjadi 1. Jika code benar maka akan muncul hasil seperti dibawah ini</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># merge df</span>
@@ -1028,7 +1078,8 @@ Requirement already satisfied: pymysql in c:\users\ebc komputer\anaconda3\lib\si
 </div>
 </div>
 <div class="section" id="drop-id">
-<h2>Drop id<a class="headerlink" href="#drop-id" title="Permalink to this heading">#</a></h2>
+<h3>Drop id<a class="headerlink" href="#drop-id" title="Permalink to this heading">#</a></h3>
+<p>Setelah code diatas, karena masih ada id, jadi harus drop id terlebih dahulu, dan codenya sebagai berikut.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1156,6 +1207,10 @@ Requirement already satisfied: pymysql in c:\users\ebc komputer\anaconda3\lib\si
 <p>150 rows × 5 columns</p>
 </div></div></div>
 </div>
+</div>
+<div class="section" id="menghitung-akurasi">
+<h3>Menghitung akurasi<a class="headerlink" href="#menghitung-akurasi" title="Permalink to this heading">#</a></h3>
+<p>Setelah semuanya selesai, lalu menghitung akurasi dengan menggunakan metode KNN dan Decicion Tree</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">4</span><span class="p">]</span>
@@ -1330,7 +1385,7 @@ Requirement already satisfied: pymysql in c:\users\ebc komputer\anaconda3\lib\si
 </div>
 </div>
 <div class="section" id="decicion-tree">
-<h2>Decicion Tree<a class="headerlink" href="#decicion-tree" title="Permalink to this heading">#</a></h2>
+<h3>Decicion Tree<a class="headerlink" href="#decicion-tree" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
@@ -1368,7 +1423,7 @@ Requirement already satisfied: pymysql in c:\users\ebc komputer\anaconda3\lib\si
 </div>
 </div>
 <div class="section" id="knn">
-<h2>KNN<a class="headerlink" href="#knn" title="Permalink to this heading">#</a></h2>
+<h3>KNN<a class="headerlink" href="#knn" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
@@ -1400,6 +1455,7 @@ Requirement already satisfied: pymysql in c:\users\ebc komputer\anaconda3\lib\si
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> KNN Accuracy :  100.0
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1440,17 +1496,8 @@ Requirement already satisfied: pymysql in c:\users\ebc komputer\anaconda3\lib\si
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 3 - Data Artikel</p>
+        <p class="prev-next-title">Crawling Data Artikel</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="deskripsi.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Deskripsi Proses Pipelines</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -1467,13 +1514,20 @@ Requirement already satisfied: pymysql in c:\users\ebc komputer\anaconda3\lib\si
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-sql-server">Data dari SQL Server</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-postgre-elephant">Data dari postgre elephant</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-postgre-local">Data dari postgre local</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-mysql">Data dari mysql</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-id">Drop id</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decicion-tree">Decicion Tree</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-proses">Deskripsi Proses</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-sql-server">Data dari SQL Server</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-sql-server">Penjelasan SQL Server:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-postgre-elephant">Data dari postgre elephant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-singkat">Penjelasan Singkat:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-postgre-local">Data dari postgre local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-dari-mysql">Data dari mysql</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-id">Drop id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-akurasi">Menghitung akurasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decicion-tree">Decicion Tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
