@@ -63,6 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'UTSprosaindata';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tugas Pagerank" href="tugaspagerank.html" />
     <link rel="prev" title="Tugas 2 (Pipeline)" href="tugas4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -160,6 +161,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="dataartikel.html">Crawling Data Artikel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas4.html">Tugas 2 (Pipeline)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">UTS Proyek Sain Data C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugaspagerank.html">Tugas Pagerank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugastopicmodelling.html">Tugas Topic Modelling</a></li>
 </ul>
 
     </div>
@@ -388,118 +391,125 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: nltk in /usr/local/lib/python3.9/dist-packages (3.8.1)
-Requirement already satisfied: tqdm in /usr/local/lib/python3.9/dist-packages (from nltk) (4.65.0)
-Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.9/dist-packages (from nltk) (2022.10.31)
-Requirement already satisfied: click in /usr/local/lib/python3.9/dist-packages (from nltk) (8.1.3)
-Requirement already satisfied: joblib in /usr/local/lib/python3.9/dist-packages (from nltk) (1.1.1)
+Requirement already satisfied: nltk in /usr/local/lib/python3.10/dist-packages (3.8.1)
+Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.10/dist-packages (from nltk) (2022.10.31)
+Requirement already satisfied: click in /usr/local/lib/python3.10/dist-packages (from nltk) (8.1.3)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from nltk) (4.65.0)
+Requirement already satisfied: joblib in /usr/local/lib/python3.10/dist-packages (from nltk) (1.2.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting sastrawi
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 KB</span> <span class=" -Color -Color-Red">18.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sastrawi
+  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ <span class=" -Color -Color-Green">204.8/209.7 kB</span> <span class=" -Color -Color-Red">7.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">5.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: sastrawi
-Successfully installed sastrawi-1.0.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed sastrawi-1.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting swifter
-  Downloading swifter-1.3.4.tar.gz (830 kB)
-?25l
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/830.9 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">830.9/830.9 KB</span> <span class=" -Color -Color-Red">37.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting swifter
+  Downloading swifter-1.3.4.tar.gz (830 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/830.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">307.2/830.9 kB</span> <span class=" -Color -Color-Red">9.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">830.9/830.9 kB</span> <span class=" -Color -Color-Red">13.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
-Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (1.4.4)
-Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.9/dist-packages (from swifter) (5.9.4)
-Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (2022.12.1)
-Requirement already satisfied: tqdm&gt;=4.33.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (4.65.0)
-Requirement already satisfied: ipywidgets&gt;=7.0.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (7.7.1)
-Requirement already satisfied: cloudpickle&gt;=0.2.2 in /usr/local/lib/python3.9/dist-packages (from swifter) (2.2.1)
-Requirement already satisfied: parso&gt;0.4.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (0.8.3)
-Requirement already satisfied: bleach&gt;=3.1.1 in /usr/local/lib/python3.9/dist-packages (from swifter) (6.0.0)
-Requirement already satisfied: webencodings in /usr/local/lib/python3.9/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
-Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.9/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (1.16.0)
-Requirement already satisfied: click&gt;=7.0 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (8.1.3)
-Requirement already satisfied: pyyaml&gt;=5.3.1 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
-Requirement already satisfied: toolz&gt;=0.8.2 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.12.0)
-Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2023.3.0)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (23.0)
-Requirement already satisfied: partd&gt;=0.3.10 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.3.0)
-Requirement already satisfied: numpy&gt;=1.18 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.22.4)
-Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.7)
-Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.34.0)
-Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.6.4)
-Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
-Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.5.6)
-Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.7.1)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2022.7.1)
-Requirement already satisfied: jupyter-client in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.12)
-Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.2)
-Requirement already satisfied: jedi&gt;=0.16 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.2)
-Requirement already satisfied: pygments in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.14.0)
-Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.8.0)
-Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.1.6)
-Requirement already satisfied: decorator in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.4.2)
-Requirement already satisfied: backcall in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
-Requirement already satisfied: pickleshare in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.5)
-Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (67.6.1)
-Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.38)
-Requirement already satisfied: locket in /usr/local/lib/python3.9/dist-packages (from partd&gt;=0.3.10-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.0.0)
-Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.9/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.4.8)
+Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (1.5.3)
+Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.10/dist-packages (from swifter) (5.9.5)
+Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (2022.12.1)
+Requirement already satisfied: tqdm&gt;=4.33.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (4.65.0)
+Requirement already satisfied: ipywidgets&gt;=7.0.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (7.7.1)
+Requirement already satisfied: cloudpickle&gt;=0.2.2 in /usr/local/lib/python3.10/dist-packages (from swifter) (2.2.1)
+Requirement already satisfied: parso&gt;0.4.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (0.8.3)
+Requirement already satisfied: bleach&gt;=3.1.1 in /usr/local/lib/python3.10/dist-packages (from swifter) (6.0.0)
+Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.10/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (1.16.0)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.10/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
+Requirement already satisfied: pyyaml&gt;=5.3.1 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
+Requirement already satisfied: toolz&gt;=0.8.2 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.12.0)
+Requirement already satisfied: click&gt;=7.0 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (8.1.3)
+Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2023.4.0)
+Requirement already satisfied: partd&gt;=0.3.10 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.4.0)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (23.1)
+Requirement already satisfied: numpy&gt;=1.18 in /usr/local/lib/python3.10/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.22.4)
+Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.7.1)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.7)
+Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.34.0)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.6.4)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.5.6)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.10/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2022.7.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-core&gt;=4.6.1 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.0)
-Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.17.1)
-Requirement already satisfied: nbconvert in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.5.4)
-Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.2.1)
-Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.3.0)
-Requirement already satisfied: nest-asyncio&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.6)
-Requirement already satisfied: nbformat in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.8.0)
-Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
-Requirement already satisfied: prometheus-client in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.16.0)
-Requirement already satisfied: jinja2 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
-Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.9/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.0)
-Requirement already satisfied: wcwidth in /usr/local/lib/python3.9/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.6)
-Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from jupyter-core&gt;=4.6.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.2.0)
-Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.2.0)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.1.2)
-Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.9.2)
-Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.4)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.8.4)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.0)
-Requirement already satisfied: tinycss2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.2.1)
-Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.2)
-Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.13)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.11.2)
-Requirement already satisfied: defusedxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.1)
-Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.3.3)
-Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.16.3)
-Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.19.3)
-Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (22.2.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-client in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.12)
+Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.2)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.1.6)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.5)
+Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.8.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.38)
+Requirement already satisfied: pygments in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.14.0)
+Requirement already satisfied: backcall in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.4.2)
+Requirement already satisfied: jedi&gt;=0.16 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.2)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (67.7.2)
+Requirement already satisfied: locket in /usr/local/lib/python3.10/dist-packages (from partd&gt;=0.3.10-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.0.0)
+Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.10/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.4.8)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.15.1)
-Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.4)
-Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.21)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-core&gt;=4.6.1 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.0)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
+Requirement already satisfied: prometheus-client in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.16.0)
+Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.3.0)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
+Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.17.1)
+Requirement already satisfied: nbformat in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.8.0)
+Requirement already satisfied: nest-asyncio&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.6)
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.5.4)
+Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.2.1)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.0)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.6)
+Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from jupyter-core&gt;=4.6.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.3.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.2.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.1.2)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.2)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.1)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.0)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.2.1)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.11.2)
+Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.9.2)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.8.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.4)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.10/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.4)
+Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.10/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.3.3)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.10/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.16.3)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.19.3)
+Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.1.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.15.1)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.4.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.21)
 Building wheels for collected packages: swifter
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for swifter (setup.py) ... ?25l?25hdone
-  Created wheel for swifter: filename=swifter-1.3.4-py3-none-any.whl size=16321 sha256=78845a9e2ea55372043fb0922cf46d6ec3edf1ffdf150bbe01191570eba08ce8
-  Stored in directory: /root/.cache/pip/wheels/2b/5e/f2/3931524f702ffd03309e96d35ee2fbf9c61c27377511ee8d4c
+  Created wheel for swifter: filename=swifter-1.3.4-py3-none-any.whl size=16321 sha256=6ffb738594782b35c09a28d703b6cc3d16ab1b34ee48166069d170b722864e74
+  Stored in directory: /root/.cache/pip/wheels/6c/bd/3e/2d6afc9bc36c9975f8e4215a270bbac6580c4361ebd6bb2323
 Successfully built swifter
 </pre></div>
 </div>
@@ -681,7 +691,7 @@ Name: Abstrak, Length: 805, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">AttributeError</span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.9/dist-packages/swifter/swifter.py</span> in <span class="ni">apply</span><span class="nt">(self, func, convert_dtype, args, **kwds)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/swifter/swifter.py</span> in <span class="ni">apply</span><span class="nt">(self, func, convert_dtype, args, **kwds)</span>
 <span class="g g-Whitespace">    </span><span class="mi">308</span>             <span class="k">with</span> <span class="n">suppress_stdout_stderr_logging</span><span class="p">():</span>
 <span class="ne">--&gt; </span><span class="mi">309</span>                 <span class="n">tmp_df</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="n">sample_df</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">convert_dtype</span><span class="o">=</span><span class="n">convert_dtype</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
@@ -691,10 +701,10 @@ Name: Abstrak, Length: 805, dtype: object
 <span class="ne">----&gt; </span><span class="mi">6</span>     <span class="n">comment</span> <span class="o">=</span> <span class="n">comment</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/generic.py</span> in <span class="ni">__getattr__</span><span class="nt">(self, name)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5574</span>             <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
-<span class="ne">-&gt; </span><span class="mi">5575</span>         <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5576</span> 
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/generic.py</span> in <span class="ni">__getattr__</span><span class="nt">(self, name)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5901</span>             <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="ne">-&gt; </span><span class="mi">5902</span>         <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5903</span> 
 
 <span class="ne">AttributeError</span>: &#39;Series&#39; object has no attribute &#39;split&#39;
 
@@ -707,58 +717,58 @@ Name: Abstrak, Length: 805, dtype: object
 <span class="ne">---&gt; </span><span class="mi">16</span> <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">swifter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stemmingNormalize</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">text</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/swifter/swifter.py</span> in <span class="ni">apply</span><span class="nt">(self, func, convert_dtype, args, **kwds)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/swifter/swifter.py</span> in <span class="ni">apply</span><span class="nt">(self, func, convert_dtype, args, **kwds)</span>
 <span class="g g-Whitespace">    </span><span class="mi">316</span>         <span class="k">except</span> <span class="n">ERRORS_TO_HANDLE</span><span class="p">:</span>  <span class="c1"># if can&#39;t vectorize, estimate time to pandas apply</span>
 <span class="g g-Whitespace">    </span><span class="mi">317</span>             <span class="n">wrapped</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wrapped_apply</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">convert_dtype</span><span class="o">=</span><span class="n">convert_dtype</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">318</span>             <span class="n">timed</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">wrapped</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="n">N_REPEATS</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">319</span>             <span class="n">sample_proc_est</span> <span class="o">=</span> <span class="n">timed</span> <span class="o">/</span> <span class="n">N_REPEATS</span>
 <span class="g g-Whitespace">    </span><span class="mi">320</span>             <span class="n">est_apply_duration</span> <span class="o">=</span> <span class="n">sample_proc_est</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_SAMPLE_SIZE</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nrows</span>
 
-<span class="nn">/usr/lib/python3.9/timeit.py</span> in <span class="ni">timeit</span><span class="nt">(stmt, setup, timer, number, globals)</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span>            <span class="n">number</span><span class="o">=</span><span class="n">default_number</span><span class="p">,</span> <span class="nb">globals</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">232</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Convenience function to create Timer object and call timeit method.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">233</span>     <span class="k">return</span> <span class="n">Timer</span><span class="p">(</span><span class="n">stmt</span><span class="p">,</span> <span class="n">setup</span><span class="p">,</span> <span class="n">timer</span><span class="p">,</span> <span class="nb">globals</span><span class="p">)</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">234</span> 
-<span class="g g-Whitespace">    </span><span class="mi">235</span> <span class="k">def</span> <span class="nf">repeat</span><span class="p">(</span><span class="n">stmt</span><span class="o">=</span><span class="s2">&quot;pass&quot;</span><span class="p">,</span> <span class="n">setup</span><span class="o">=</span><span class="s2">&quot;pass&quot;</span><span class="p">,</span> <span class="n">timer</span><span class="o">=</span><span class="n">default_timer</span><span class="p">,</span>
+<span class="nn">/usr/lib/python3.10/timeit.py</span> in <span class="ni">timeit</span><span class="nt">(stmt, setup, timer, number, globals)</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span>            <span class="n">number</span><span class="o">=</span><span class="n">default_number</span><span class="p">,</span> <span class="nb">globals</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Convenience function to create Timer object and call timeit method.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">234</span>     <span class="k">return</span> <span class="n">Timer</span><span class="p">(</span><span class="n">stmt</span><span class="p">,</span> <span class="n">setup</span><span class="p">,</span> <span class="n">timer</span><span class="p">,</span> <span class="nb">globals</span><span class="p">)</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">235</span> 
+<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">def</span> <span class="nf">repeat</span><span class="p">(</span><span class="n">stmt</span><span class="o">=</span><span class="s2">&quot;pass&quot;</span><span class="p">,</span> <span class="n">setup</span><span class="o">=</span><span class="s2">&quot;pass&quot;</span><span class="p">,</span> <span class="n">timer</span><span class="o">=</span><span class="n">default_timer</span><span class="p">,</span>
 
-<span class="nn">/usr/lib/python3.9/timeit.py</span> in <span class="ni">timeit</span><span class="nt">(self, number)</span>
-<span class="g g-Whitespace">    </span><span class="mi">175</span>         <span class="n">gc</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">177</span>             <span class="n">timing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span>         <span class="k">finally</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span>             <span class="k">if</span> <span class="n">gcold</span><span class="p">:</span>
+<span class="nn">/usr/lib/python3.10/timeit.py</span> in <span class="ni">timeit</span><span class="nt">(self, number)</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span>         <span class="n">gc</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">178</span>             <span class="n">timing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">180</span>             <span class="k">if</span> <span class="n">gcold</span><span class="p">:</span>
 
-<span class="nn">/usr/lib/python3.9/timeit.py</span> in <span class="ni">inner</span><span class="nt">(_it, _timer, _stmt)</span>
+<span class="nn">/usr/lib/python3.10/timeit.py</span> in <span class="ni">inner</span><span class="nt">(_it, _timer, _stmt)</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/swifter/swifter.py</span> in <span class="ni">wrapped</span><span class="nt">()</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/swifter/swifter.py</span> in <span class="ni">wrapped</span><span class="nt">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">225</span>         <span class="k">def</span> <span class="nf">wrapped</span><span class="p">():</span>
 <span class="g g-Whitespace">    </span><span class="mi">226</span>             <span class="k">with</span> <span class="n">suppress_stdout_stderr_logging</span><span class="p">():</span>
 <span class="ne">--&gt; </span><span class="mi">227</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_obj</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_SAMPLE_INDEX</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">convert_dtype</span><span class="o">=</span><span class="n">convert_dtype</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">228</span> 
 <span class="g g-Whitespace">    </span><span class="mi">229</span>         <span class="k">return</span> <span class="n">wrapped</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/series.py</span> in <span class="ni">apply</span><span class="nt">(self, func, convert_dtype, args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4431</span>         <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
-<span class="g g-Whitespace">   </span><span class="mi">4432</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">4433</span><span class="sd">         return SeriesApply(self, func, convert_dtype, args, kwargs).apply()</span>
-<span class="g g-Whitespace">   </span><span class="mi">4434</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">4435</span><span class="sd">     def _reduce(</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/series.py</span> in <span class="ni">apply</span><span class="nt">(self, func, convert_dtype, args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4769</span>         <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+<span class="g g-Whitespace">   </span><span class="mi">4770</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">4771</span><span class="sd">         return SeriesApply(self, func, convert_dtype, args, kwargs).apply()</span>
+<span class="g g-Whitespace">   </span><span class="mi">4772</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">4773</span><span class="sd">     def _reduce(</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/apply.py</span> in <span class="ni">apply</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1086</span><span class="sd">             return self.apply_str()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1087</span><span class="sd"> </span>
-<span class="ne">-&gt; </span><span class="mi">1088</span><span class="sd">         return self.apply_standard()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1089</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1090</span><span class="sd">     def agg(self):</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/apply.py</span> in <span class="ni">apply</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1121</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1122</span><span class="sd">         # self.f is Callable</span>
+<span class="ne">-&gt; </span><span class="mi">1123</span><span class="sd">         return self.apply_standard()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1124</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1125</span><span class="sd">     def agg(self):</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/apply.py</span> in <span class="ni">apply_standard</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1141</span><span class="sd">                 # List[Union[Callable[..., Any], str]]]]]&quot;; expected</span>
-<span class="g g-Whitespace">   </span><span class="mi">1142</span><span class="sd">                 # &quot;Callable[[Any], Any]&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1143</span><span class="sd">                 mapped = lib.map_infer(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1144</span><span class="sd">                     values,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1145</span><span class="sd">                     f,  # type: ignore[arg-type]</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/apply.py</span> in <span class="ni">apply_standard</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd">             else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span><span class="sd">                 values = obj.astype(object)._values</span>
+<span class="ne">-&gt; </span><span class="mi">1174</span><span class="sd">                 mapped = lib.map_infer(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1175</span><span class="sd">                     values,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span><span class="sd">                     f,</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/_libs/lib.pyx</span> in <span class="ni">pandas._libs.lib.map_infer</span><span class="nt">()</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/_libs/lib.pyx</span> in <span class="ni">pandas._libs.lib.map_infer</span><span class="nt">()</span>
 
 <span class="nn">&lt;ipython-input-7-bb7a571feed2&gt;</span> in <span class="ni">stemmingNormalize</span><span class="nt">(comment)</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span><span class="sd">     data = []</span>
@@ -767,75 +777,61 @@ Name: Abstrak, Length: 805, dtype: object
 <span class="g g-Whitespace">     </span><span class="mi">10</span><span class="sd">         data.append(term)</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span><span class="sd">     kalimat = &quot;&quot;</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/CachedStemmer.py</span> in <span class="ni">stem</span><span class="nt">(self, text)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/CachedStemmer.py</span> in <span class="ni">stem</span><span class="nt">(self, text)</span>
 <span class="g g-Whitespace">     </span><span class="mi">18</span><span class="sd">                 stems.append(self.cache.get(word))</span>
 <span class="g g-Whitespace">     </span><span class="mi">19</span><span class="sd">             else:</span>
 <span class="ne">---&gt; </span><span class="mi">20</span><span class="sd">                 stem = self.delegatedStemmer.stem(word)</span>
 <span class="g g-Whitespace">     </span><span class="mi">21</span><span class="sd">                 self.cache.set(word, stem)</span>
 <span class="g g-Whitespace">     </span><span class="mi">22</span><span class="sd">                 stems.append(stem)</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem</span><span class="nt">(self, text)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem</span><span class="nt">(self, text)</span>
 <span class="g g-Whitespace">     </span><span class="mi">25</span><span class="sd"> </span>
 <span class="g g-Whitespace">     </span><span class="mi">26</span><span class="sd">         for word in words:</span>
 <span class="ne">---&gt; </span><span class="mi">27</span><span class="sd">             stems.append(self.stem_word(word))</span>
 <span class="g g-Whitespace">     </span><span class="mi">28</span><span class="sd"> </span>
 <span class="g g-Whitespace">     </span><span class="mi">29</span><span class="sd">         return &#39; &#39;.join(stems)</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem_word</span><span class="nt">(self, word)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem_word</span><span class="nt">(self, word)</span>
 <span class="g g-Whitespace">     </span><span class="mi">34</span><span class="sd">             return self.stem_plural_word(word)</span>
 <span class="g g-Whitespace">     </span><span class="mi">35</span><span class="sd">         else:</span>
 <span class="ne">---&gt; </span><span class="mi">36</span><span class="sd">             return self.stem_singular_word(word)</span>
 <span class="g g-Whitespace">     </span><span class="mi">37</span><span class="sd"> </span>
 <span class="g g-Whitespace">     </span><span class="mi">38</span><span class="sd">     def is_plural(self, word):</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem_singular_word</span><span class="nt">(self, word)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem_singular_word</span><span class="nt">(self, word)</span>
 <span class="g g-Whitespace">     </span><span class="mi">82</span><span class="sd">         &quot;&quot;&quot;</span><span class="n">Stem</span> <span class="n">a</span> <span class="n">singular</span> <span class="n">word</span> <span class="n">to</span> <span class="n">its</span> <span class="n">common</span> <span class="n">stem</span> <span class="n">form</span><span class="o">.</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="g g-Whitespace">     </span><span class="mi">83</span><span class="s2">         context = Context(word, self.dictionary, self.visitor_provider)</span>
 <span class="ne">---&gt; </span><span class="mi">84</span><span class="s2">         context.execute()</span>
 <span class="g g-Whitespace">     </span><span class="mi">85</span><span class="s2"> </span>
 <span class="g g-Whitespace">     </span><span class="mi">86</span><span class="s2">         return context.result</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">execute</span><span class="nt">(self)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">execute</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">     </span><span class="mi">35</span><span class="s2"> </span>
 <span class="g g-Whitespace">     </span><span class="mi">36</span><span class="s2">         #step 1 - 5</span>
 <span class="ne">---&gt; </span><span class="mi">37</span><span class="s2">         self.start_stemming_process()</span>
 <span class="g g-Whitespace">     </span><span class="mi">38</span><span class="s2"> </span>
 <span class="g g-Whitespace">     </span><span class="mi">39</span><span class="s2">         #step 6</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">start_stemming_process</span><span class="nt">(self)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">start_stemming_process</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">     </span><span class="mi">78</span><span class="s2"> </span>
 <span class="g g-Whitespace">     </span><span class="mi">79</span><span class="s2">         #step 4, 5</span>
 <span class="ne">---&gt; </span><span class="mi">80</span><span class="s2">         self.remove_prefixes()</span>
 <span class="g g-Whitespace">     </span><span class="mi">81</span><span class="s2">         if self.dictionary.contains(self.current_word):</span>
 <span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">             return</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">remove_prefixes</span><span class="nt">(self)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">remove_prefixes</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">     </span><span class="mi">87</span><span class="s2">     def remove_prefixes(self):</span>
 <span class="g g-Whitespace">     </span><span class="mi">88</span><span class="s2">         for i in range(3):</span>
 <span class="ne">---&gt; </span><span class="mi">89</span><span class="s2">             self.accept_prefix_visitors(self.prefix_pisitors)</span>
 <span class="g g-Whitespace">     </span><span class="mi">90</span><span class="s2">             if self.dictionary.contains(self.current_word):</span>
 <span class="g g-Whitespace">     </span><span class="mi">91</span><span class="s2">                 return</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept_prefix_visitors</span><span class="nt">(self, visitors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span><span class="s2">         removalCount = len(self.removals)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept_prefix_visitors</span><span class="nt">(self, visitors)</span>
 <span class="g g-Whitespace">    </span><span class="mi">109</span><span class="s2">         for visitor in visitors:</span>
-<span class="ne">--&gt; </span><span class="mi">110</span><span class="s2">             self.accept(visitor)</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span><span class="s2">             if self.dictionary.contains(self.current_word):</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span><span class="s2">             self.accept(visitor)</span>
+<span class="ne">--&gt; </span><span class="mi">111</span><span class="s2">             if self.dictionary.contains(self.current_word):</span>
 <span class="g g-Whitespace">    </span><span class="mi">112</span><span class="s2">                 return self.current_word</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept</span><span class="nt">(self, visitor)</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span><span class="s2"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span><span class="s2">     def accept(self, visitor):</span>
-<span class="ne">---&gt; </span><span class="mi">97</span><span class="s2">         visitor.visit(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span><span class="s2"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="s2">     def accept_visitors(self, visitors):</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Visitor/AbstractDisambiguatePrefixRule.py</span> in <span class="ni">visit</span><span class="nt">(self, context)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span><span class="s2">         for disambiguator in self.disambiguators:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span><span class="s2">             result = disambiguator.disambiguate(context.current_word)</span>
-<span class="ne">---&gt; </span><span class="mi">15</span><span class="s2">             if context.dictionary.contains(result):</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span><span class="s2">                 break</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span><span class="s2">             if self.process_is_stopped:</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -2215,6 +2211,15 @@ KOMPUTASI 	 :  KOMPUTASI
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Tugas 2 (Pipeline)</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="tugaspagerank.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tugas Pagerank</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
