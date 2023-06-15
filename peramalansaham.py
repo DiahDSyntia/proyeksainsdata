@@ -22,6 +22,14 @@ tab_titles = [
     ]
 tabs = st.tabs(tab_titles)
 
+st.sidebar.write("""
+            Nama: Diah Dwi Syntia (200411100001)"""
+            )
+st.sidebar.write("""
+            Nama: Rosita Dewi Lutfiyah (200411100002)
+            """
+            )
+
 
 with tabs[0]:
     st.write("""
