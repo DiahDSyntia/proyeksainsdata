@@ -13,10 +13,6 @@ import pickle
 
 
 st.title('Prediksi Saham pada perusahaan PT ASTRA INTERNATIONAL TBK')
-st.write("""
-### Random Forest Regressor
-"""
-)
 
 tab_titles = [
     "Data",
@@ -211,7 +207,6 @@ with tabs[3]:
     with open('minmax','wb') as r:
         pickle.dump(scaler,r)
     
-    st.title("""Implementasi Data Saham""")
     input_1 = st.number_input('Masukkan Data 1')
     input_2 = st.number_input('Masukkan Data 2')
     input_3 = st.number_input('Masukkan Data 3')
