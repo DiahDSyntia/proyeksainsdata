@@ -234,7 +234,7 @@ with tabs[3]:
       X_pred = model.predict([[(data1[0][0]),(data2[0][0]),(data3[0][0]),(data4[0][0])]])
       t_data1= X_pred.reshape(-1, 1)
       original = minmax.inverse_transform(t_data1)
-      hasil =f"Prediksi Hasil Peramalan Pada Harga Pembukaan Saham PT Astra International Tbk adalah  : {original[0][0]}"
+      hasil =f"Prediksi Hasil Peramalan Pada Harga Penutupan Saham PT Astra International Tbk adalah  : {original[0][0]}"
       st.success(hasil)
 
     all = st.button("Submit")
